@@ -1,0 +1,8 @@
+version: '3'
+services:
+  slack_bot:
+    build: .
+    env_file:
+      - app/.env
+    volumes:
+      - ./app:/app
