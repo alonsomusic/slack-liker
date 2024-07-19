@@ -19,7 +19,7 @@ def process_message(event_data):
         try:
             client.reactions_add(
                 channel=data['channel'],
-                name='thumbsup',  # Лайк-реакция
+                name='heart',  # Лайк-реакция
                 timestamp=data['ts']
             )
             print(f"Лайкнуто новое сообщение с timestamp {data['ts']}")
