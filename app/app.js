@@ -19,9 +19,6 @@ processedMessages = new Set()
 app.message(async ( event ) => {
   const { message, say } = event
 
-  console.log('Event: ', event.event)
-//   console.log('Received message:', message); // Логирование входящих сообщений
-
   if (message.channel === channelId && !message.subtype) {
     if (processedMessages.has(message.ts)) {
         return
