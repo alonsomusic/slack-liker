@@ -1,8 +1,14 @@
-version: '3'
+version: '3.9'
+
 services:
-  slack_bot:
-    build: .
-    env_file:
-      - app/.env
+  slack-liker:
+    build:
+      context: ./app
+    env_file: ./app/.env
+    # environment:
+    #   - SLACK_USER_TOKEN=${SLACK_USER_TOKEN}
+    #   - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+    #   - SLACK_CHANNEL_ID=${SLACK_CHANNEL_ID}
     volumes:
-      - ./app:/app
+      - ./app:/usr/src/app
+    restart: always

@@ -1,2 +1,0 @@
-slack_sdk
-python-dotenv
