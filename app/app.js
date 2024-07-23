@@ -19,7 +19,7 @@ processedMessages = new Set()
 app.message(async ( event ) => {
   const { message, say } = event
 
-  if (message.channel === channelId && !message.subtype) {
+  if (message.channel === channelId && !message.subtype && !message.thread_ts) {
     if (processedMessages.has(message.ts)) {
         return
       }
